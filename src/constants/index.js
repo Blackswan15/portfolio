@@ -28,8 +28,7 @@ export const myProjects = [
     desc: 'VoxTamil is a specialized Natural Language Processing platform built to decode multi-class political sentiments from regional Tamil text. By analyzing public commentary from platforms like X, it classifies conversational data into seven distinct political categories with high precision.',
     subdesc:
       'Built as a high-performance NLP pipeline using Python, MuRIL, XLM-RoBERTa, and Hugging Face Transformers, VoxTamil scaled to process over 10,000 comments, securing a global Rank 19 on the DravidianLangTech leaderboard.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-    texture: '/textures/project/project1.mp4',
+    texture: '/textures/project/project.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
       backgroundColor: '#2A1816',
