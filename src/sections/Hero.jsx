@@ -28,13 +28,12 @@ const Hero = () => {
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
           Hi, I am Abishek Ramaswami <span className="waving-hand">👋</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
+        <p className="hero_tag text-gray_gradient">Building Products & Solutions</p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            {/* To hide controller */}
             <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
