@@ -20,15 +20,16 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Aligned template parameters with exactly what your dashboard fields require
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
-          to_name: 'JavaScript Mastery',
-          from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
+          title: `Portfolio Contact from ${form.name}`,
+          name: form.name,
+          time: new Date().toLocaleString(),
+          email: form.email,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
@@ -38,10 +39,9 @@ const Contact = () => {
           setLoading(false);
           showAlert({
             show: true,
-            text: 'Thank you for your message 😃',
+            text: 'Thank you for your message ',
             type: 'success',
           });
-
           setTimeout(() => {
             hideAlert(false);
             setForm({
@@ -49,7 +49,7 @@ const Contact = () => {
               email: '',
               message: '',
             });
-          }, [3000]);
+          }, 3000);
         },
         (error) => {
           setLoading(false);
@@ -57,7 +57,7 @@ const Contact = () => {
 
           showAlert({
             show: true,
-            text: "I didn't receive your message 😢",
+            text: "I didn't receive your message ",
             type: 'danger',
           });
         },
